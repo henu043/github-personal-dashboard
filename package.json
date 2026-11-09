@@ -1,0 +1,104 @@
+{
+  "name": "github-personal-dashboard",
+  "displayName": "GitHub Personal Dashboard",
+  "description": "在 VS Code 查看个人 GitHub Issues、PR、CI 状态和通知。View personal GitHub issues, pull requests, CI checks, and notifications in VS Code.",
+  "version": "0.1.24",
+  "publisher": "Lanxiao",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:githubPersonalDashboard.open",
+    "onCommand:githubPersonalDashboard.refresh",
+    "onCommand:githubPersonalDashboard.setToken",
+    "onCommand:githubPersonalDashboard.clearToken",
+    "onCommand:githubPersonalDashboard.diagnoseAuth"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "githubPersonalDashboard.open",
+        "title": "GitHub Dashboard: Open"
+      },
+      {
+        "command": "githubPersonalDashboard.refresh",
+        "title": "GitHub Dashboard: Refresh"
+      },
+      {
+        "command": "githubPersonalDashboard.setToken",
+        "title": "GitHub Dashboard: Set Personal Access Token"
+      },
+      {
+        "command": "githubPersonalDashboard.clearToken",
+        "title": "GitHub Dashboard: Clear Personal Access Token"
+      },
+      {
+        "command": "githubPersonalDashboard.diagnoseAuth",
+        "title": "GitHub Dashboard: Diagnose Authentication"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "githubPersonalDashboard.open"
+        },
+        {
+          "command": "githubPersonalDashboard.refresh"
+        },
+        {
+          "command": "githubPersonalDashboard.setToken"
+        },
+        {
+          "command": "githubPersonalDashboard.clearToken"
+        },
+        {
+          "command": "githubPersonalDashboard.diagnoseAuth"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "GitHub Personal Dashboard",
+      "properties": {
+        "githubPersonalDashboard.apiBaseUrl": {
+          "type": "string",
+          "default": "https://api.github.com",
+          "description": "GitHub API base URL. Change this for GitHub Enterprise Server."
+        },
+        "githubPersonalDashboard.refreshIntervalMinutes": {
+          "type": "number",
+          "default": 3,
+          "minimum": 0,
+          "description": "Automatic refresh interval in minutes. Set to 0 to disable."
+        }
+      }
+    }
+  },
+  "author": "Lanxiao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lanxiao12345/github-personal-dashboard.git"
+  },
+  "homepage": "https://github.com/Lanxiao12345/github-personal-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/Lanxiao12345/github-personal-dashboard/issues"
+  },
+  "keywords": [
+    "github",
+    "dashboard",
+    "issues",
+    "pull-requests",
+    "notifications",
+    "ci"
+  ],
+  "scripts": {
+    "check": "node --check extension.js",
+    "test": "node --test tests/refresh.cjs",
+    "package": "python3 scripts/package_vsix.py"
+  }
+}
