@@ -39,7 +39,7 @@ GitHub Personal Dashboard 是一个 VS Code 扩展，将个人 GitHub Issues、P
 要求：VS Code **1.85.0+**，能够访问 GitHub API；源码打包需要 **Python 3**。
 
 ```bash
-git clone https://github.com/Lanxiao12345/github-personal-dashboard.git
+git clone https://github.com/henu043/github-personal-dashboard.git
 cd github-personal-dashboard
 python3 scripts/package_vsix.py
 ```
@@ -131,7 +131,7 @@ npm run package
 | `scripts/package_vsix.py` | 使用 Python 标准库生成 VSIX |
 | `package.json` | 命令、设置和扩展元数据 |
 
-反馈请提交至 [Issues](https://github.com/Lanxiao12345/github-personal-dashboard/issues)，附上版本、复现步骤及已移除敏感信息的错误内容。更新记录见 [CHANGELOG.md](CHANGELOG.md)。
+反馈请提交至 [Issues](https://github.com/henu043/github-personal-dashboard/issues)，附上版本、复现步骤及已移除敏感信息的错误内容。更新记录见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## English
 
@@ -170,7 +170,7 @@ All Checks pages are read before classification. Failed requests or incomplete r
 Requirements: VS Code **1.85.0+**, network access to GitHub's API, and **Python 3** to build from source.
 
 ```bash
-git clone https://github.com/Lanxiao12345/github-personal-dashboard.git
+git clone https://github.com/henu043/github-personal-dashboard.git
 cd github-personal-dashboard
 python3 scripts/package_vsix.py
 ```
@@ -258,4 +258,4 @@ Tests use the Node.js test runner with mocked VS Code APIs and GitHub responses.
 | `scripts/package_vsix.py` | Build a VSIX using the Python standard library |
 | `package.json` | Extension metadata, commands, and settings |
 
-Report bugs and suggestions in [Issues](https://github.com/Lanxiao12345/github-personal-dashboard/issues), including the version, reproduction steps, and errors with sensitive data removed. See [CHANGELOG.md](CHANGELOG.md) for changes and [LICENSE](LICENSE) for the MIT license.
+Report bugs and suggestions in [Issues](https://github.com/henu043/github-personal-dashboard/issues), including the version, reproduction steps, and errors with sensitive data removed. See [CHANGELOG.md](CHANGELOG.md) for changes and [LICENSE](LICENSE) for the MIT license.
